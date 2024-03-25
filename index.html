@@ -3,55 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
     <title>BookBlend</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__logo">
-            <img src="/logo.png" alt="">
-        </div>
-        <div class="header__menu menu">
-            <nav class="menu__body">
-                <ul class="menu__list">
-                    <li class="menu__item"><a href="index.html" class="menu__link">Головна</a></li>
-                    <li class="menu__item"><a href="./html/catalog.html" class="menu__link">Каталог</a></li>
-                    <li class="menu__item"><a href="./html/about.html" class="menu__link">Про нас</a></li>
-                    <li class="menu__item"><a href="./html/faq.html" class="menu__link">FAQ</a></li>
-                    <li class="menu__item"><a href="./html/card.html" class="menu__link">Корзина</a></li>
-                    <li class="menu__item"><a href="./html/novelty.html" class="menu__link">Новинки</a></li>
-                    <li class="menu__item"><a href="./html/pers_office.html" class="menu__link">Кабінет</a></li>
-                </ul>
-            </nav>
-        </div>
-        <h1>BookBlend</h1>
-    </header>
-    <section>
-        <article>
-            <h2>На західному фронті без змін</h2>
-            <p>Еріх Марія Ремарк</p>
-            <p>
-                Оповідь у романі ведеться від імені молодого хлопця Пауля Боймера, який разом зі своїми сімома 
-                однокласниками потрапив на фронт під час Першої світової війни. Він розповідає про все, що 
-                відбувається зі звичайними солдатами під час війни. Участь у бойових діях на Західному фронті, 
-                життя під час більш-менш спокійних днів, перебування у шпиталях і коротких відпустках вдома. 
-                Ремарк називає цих молодих людей «втраченим поколінням», бо вони через душевні й психологічні 
-                травми, отримані під час війни,не зможуть уже адаптуватися до «нормального» мирного життя. Ця 
-                проблема є однією з найважливіших у романі.
-            </p>
-        </article>
-        <article>
-            <h2>На західному фронті без змін. Повернення</h2>
-            <p>Еріх Марія Ремарк</p>
-            <p>
-                Тема людини, яка попри всі жахи війни не втратила здатності до справжнього кохання і дружби, — 
-                одна з провідних у творчості Ремарка. Пройшовши через окопи, виживши на полях Першої світової, 
-                молодь шукає себе в новому світі, де немає смертей, не вибухають гранати та не гинуть бойові побратими. 
-                У їхніх серцях палає й веде вперед невгасимий вогонь — жага до життя.
-            </p>
-        </article>
-    </section>
-    <footer>
-        <p>&copy; 2024 Книжковий сайт. Усі права захищені.</p>
-    </footer>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__body">
+                    <a href="/index.html" class="header__logo">
+                        <img src="/logo.png" alt="">
+                    </a>
+                    <div class="header__search">
+                        <input class="header__search-input" type="text" placeholder="Пошук" id="search" />
+                        <a href="#">
+                            <img class="header__search-img" src="/img/icon/search.png" alt="">
+                        </a>
+                    </div>
+                    <div class="header__menu menu">
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item"><a href="index.html" class="menu__link active">Головна</a></li>
+                                <li class="menu__item"><a href="./html/catalog.html" class="menu__link">Каталог</a></li>
+                                <li class="menu__item"><a href="./html/about.html" class="menu__link">Про нас</a></li>
+                                <li class="menu__item"><a href="./html/faq.html" class="menu__link">FAQ</a></li>
+                                <li class="menu__item"><a href="./html/card.html" class="menu__link">Корзина</a></li>
+                                <li class="menu__item"><a href="./html/novelty.html" class="menu__link">Новинки</a></li>
+                                <li class="menu__item"><a href="./html/sing-in.html" class="menu__link">Вхід</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header__info">
+                    <h1 class="header__info-title">Головна</h1>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="main__body body__main">
+                    <div class="body__main-text">
+                        <div class="body__main-text-tit">Новинки</div>
+                        <a class="body__main-text-link" href="./html/novelty.html">Більше новинок</a>
+                    </div>
+                    <div class="body__main-list">
+                        <div class="body__main-item main-item">
+                            <a href="/html/book-page.html" class="main-item-img">
+                                <img src="./img/1.jpg" alt="Фото книги">
+                            </a>
+                            <div class="main-item-title">На західному фронті без змін</div>
+                            <div class="main-item-subtitle">Еріх Марія Ремарк</div>
+                            <div class="main-item-pricelike">
+                                <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
+                                <div class="main-item-price">20$</div>
+                            </div>
+                            <div class="main-item-buttons">
+                                <a href="#" class="main-item-button">Придбати</a>
+                                <a href="#" class="main-item-button">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="body__main-item main-item">
+                            <a href="#" class="main-item-img">
+                                <img src="./img/2.png" alt="Фото книги">
+                            </a>
+                            <div class="main-item-title">Молоко і мед</div>
+                            <div class="main-item-subtitle">Рупі Каур</div>
+                            <div class="main-item-pricelike">
+                                <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
+                                <div class="main-item-price">16$</div>
+                            </div>
+                            <div class="main-item-buttons">
+                                <a href="#" class="main-item-button">Придбати</a>
+                                <a href="#" class="main-item-button">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="body__main-item main-item">
+                            <a href="#" class="main-item-img">
+                                <img src="./img/3.jpg" alt="Фото книги">
+                            </a>
+                            <div class="main-item-title">Драбина</div>
+                            <div class="main-item-subtitle">Євгенія Кузнєцова</div>
+                            <div class="main-item-pricelike">
+                                <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
+                                <div class="main-item-price">20$</div>
+                            </div>
+                            <div class="main-item-buttons">
+                                <a href="#" class="main-item-button">Придбати</a>
+                                <a href="#" class="main-item-button">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="body__main-item main-item">
+                            <a href="#" class="main-item-img">
+                                <img src="./img/4.jpg" alt="Фото книги">
+                            </a>
+                            <div class="main-item-title">Білий попіл</div>
+                            <div class="main-item-subtitle">Ілларіон Павлюк</div>
+                            <div class="main-item-pricelike">
+                                <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
+                                <div class="main-item-price">18$</div>
+                            </div>
+                            <div class="main-item-buttons">
+                                <a href="#" class="main-item-button">Придбати</a>
+                                <a href="#" class="main-item-button">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="body__main-item main-item">
+                            <a href="#" class="main-item-img">
+                                <img src="./img/5.webp" alt="Фото книги">
+                            </a>
+                            <div class="main-item-title">Агент Лилик</div>
+                            <div class="main-item-subtitle">Юрій Винничук</div>
+                            <div class="main-item-pricelike">
+                                <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
+                                <div class="main-item-price">14$</div>
+                            </div>
+                            <div class="main-item-buttons">
+                                <a href="#" class="main-item-button">Придбати</a>
+                                <a href="#" class="main-item-button">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="body__main-item main-item">
+                            <a href="#" class="main-item-img">
+                                <img src="./img/6.webp" alt="Фото книги">
+                            </a>
+                            <div class="main-item-title">Покинь, якщо кохаєш</div>
+                            <div class="main-item-subtitle">Коллін Гувер</div>
+                            <div class="main-item-pricelike">
+                                <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
+                                <div class="main-item-price">20$</div>
+                            </div>
+                            <div class="main-item-buttons">
+                                <a href="#" class="main-item-button">Придбати</a>
+                                <a href="#" class="main-item-button">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__body">
+                    <p class="footer__copy">&copy; 2024 Книжковий сайт. Усі права захищені.</p>
+                    <div class="footer__socials">
+                        <p>Ми в соціальних мережах:</p>
+                        <a href="#"><img src="/img/icon/social/instagram.png" alt="instagram"></a>
+                        <a href="#"><img src="/img/icon/social/telegram.png" alt="telegram"></a>
+                        <a href="#"><img src="/img/icon/social/whatsapp.png" alt="whatsapp"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Rubik:regular,500,600,700" rel="stylesheet" />
     <link rel="stylesheet" href="/style.css">
-    <title>FAQ</title>
+    <title>Вхід</title>
 </head>
 <body>
     <div class="wrapper">
@@ -21,35 +21,38 @@
                                 <li class="menu__item"><a href="/index.html" class="menu__link">Головна</a></li>
                                 <li class="menu__item"><a href="/html/catalog.html" class="menu__link">Каталог</a></li>
                                 <li class="menu__item"><a href="/html/about.html" class="menu__link">Про нас</a></li>
-                                <li class="menu__item"><a href="/html/faq.html" class="menu__link active">FAQ</a></li>
+                                <li class="menu__item"><a href="/html/faq.html" class="menu__link">FAQ</a></li>
                                 <li class="menu__item"><a href="/html/card.html" class="menu__link">Корзина</a></li>
                                 <li class="menu__item"><a href="/html/novelty.html" class="menu__link">Новинки</a></li>
-                                <li class="menu__item"><a href="/html/sing-in.html" class="menu__link">Вхід</a></li>
+                                <li class="menu__item"><a href="/html/sing-in.html" class="menu__link active">Вхід</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <h1 class="header__title">FAQ</h1>
+                <h1 class="header__title">Вхід</h1>
             </div>
         </header>
         <main class="main">
             <div class="main__container">
-                <div class="main__question">
-                    <div class="main__question-general">
-                        <h2>Загальні питання</h2>
-                        <p>1. Як зареєструватися на сайті?</p>
-                        <p>
-                            Для реєстрації перейдіть на сторінку входу та оберіть "Зареєструватися". 
-                            Введіть необхідні дані та дотримуйтесь інструкцій.
-                        </p>
-                    </div>
-                    <div class="main__question-technical">
-                        <h2>Технічні питання</h2>
-                        <p>1. Якщо я забув пароль?</p>
-                        <p>На сторінці входу натисніть "Забули пароль?" і слідуйте інструкціям для
-                            скидання паролю.
-                        </p>
-                    </div>
+                <div class="form-body">
+                    <form>
+                        <label for="username">Логін:</label>
+                        <input type="text" id="username" name="username" required>
+                    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required>
+                    
+                        <label for="confirm_password">Підтвердіть пароль:</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+
+                        <a class="form-body-forgot" href="#">Забули пароль?</a>
+                    
+                        <input type="submit" value="Увійти">
+                        <p>Ще не зареєстровані? <a href="#">Зареєструватися</a></p>
+                    </form>
                 </div>
             </div>
         </main>

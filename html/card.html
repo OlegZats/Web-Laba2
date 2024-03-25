@@ -3,48 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css">
     <title>Корзина</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__menu menu">
-            <nav class="menu__body">
-                <ul class="menu__list">
-                    <li class="menu__item"><a href="../index.html" class="menu__link">Головна</a></li>
-                    <li class="menu__item"><a href="catalog.html" class="menu__link">Каталог</a></li>
-                    <li class="menu__item"><a href="about.html" class="menu__link">Про нас</a></li>
-                    <li class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li>
-                    <li class="menu__item"><a href="card.html" class="menu__link">Корзина</a></li>
-                    <li class="menu__item"><a href="novelty.html" class="menu__link">Новинки</a></li>
-                    <li class="menu__item"><a href="pers_office.html" class="menu__link">Кабінет</a></li>
-                </ul>
-            </nav>
-        </div>
-        <h1>Корзина</h1>
-    </header>
-    <section>
-        <article>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>На західному фронті без змін.</td>
-                        <td>Еріх Марія Ремарк</td>
-                        <td>$19.99</td>
-                    </tr>
-                    <tr>
-                        <td>На західному фронті без змін. Повернення</td>
-                        <td>Еріх Марія Ремарк</td>
-                        <td>$14.99</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="total">Загальна сума: $34.98</p>
-        </article>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Книжковий сайт. Усі права захищені.</p>
-    </footer>
-
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__body">
+                    <a href="/index.html" class="header__logo">
+                        <img src="/logo.png" alt="">
+                    </a>
+                    <div class="header__search">
+                        <input class="header__search-input" type="text" placeholder="Пошук" id="search" />
+                        <a href="#">
+                            <img class="header__search-img" src="/img/icon/search.png" alt="">
+                        </a>
+                    </div>
+                    <div class="header__menu menu">
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item"><a href="/index.html" class="menu__link">Головна</a></li>
+                                <li class="menu__item"><a href="/html/catalog.html" class="menu__link">Каталог</a></li>
+                                <li class="menu__item"><a href="/html/about.html" class="menu__link">Про нас</a></li>
+                                <li class="menu__item"><a href="/html/faq.html" class="menu__link">FAQ</a></li>
+                                <li class="menu__item"><a href="/html/card.html" class="menu__link active">Корзина</a></li>
+                                <li class="menu__item"><a href="/html/novelty.html" class="menu__link">Новинки</a></li>
+                                <li class="menu__item"><a href="/html/sing-in.html" class="menu__link">Вхід</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <h1 class="header__title">Корзина</h1>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="main__cards">
+                    <div class="main__card card__main">
+                        <div class="card__main-card">
+                            <div class="card__main-card-info">
+                                <div class="card__main-card-img">
+                                    <img src="/img/2.png" alt="Фото книги">
+                                </div>
+                                <div class="card__main-card-desc card-desc">
+                                    <div class="card-desc-title">Молоко і мед</div>
+                                    <div class="card-desc-subtitle">Рупі Каур</div>
+                                    <div class="card-desc-price">16$</div>
+                                    <div class="card-desc-text">В наявності</div>
+                                    <a href="#" class="card__main-card-button">Видалити</a>
+                                </div>
+                            </div>
+                            <div class="card__main-counter">
+                                <button class="card__main-counter-ar">-</button>
+                                <input class="card__main-counter-in" type="text" placeholder="1">
+                                <button class="card__main-counter-ar">+</button>
+                            </div>
+                        </div>
+                        <div class="card__main-card">
+                            <div class="card__main-card-info">
+                            <div class="card__main-card-img">
+                                <img src="/img/1.jpg" alt="Фото книги">
+                            </div>
+                            <div class="card__main-card-desc card-desc">
+                                <div class="card-desc-title">На західному фронті без змін</div>
+                                <div class="card-desc-subtitle">Еріх Марія Ремарк</div>
+                                <div class="card-desc-price">20$</div>
+                                <div class="card-desc-text">В наявності</div>
+                                <a href="#" class="card__main-card-button">Видалити</a>
+                            </div>
+                            </div>
+                            <div class="card__main-counter">
+                                <button class="card__main-counter-ar">-</button>
+                                <input class="card__main-counter-in" type="text" placeholder="1">
+                                <button class="card__main-counter-ar">+</button>
+                            </div>
+                        </div>
+                        <div class="card__main-card">
+                            <div class="card__main-card-info">
+                            <div class="card__main-card-img">
+                                <img src="/img/5.webp" alt="Фото книги">
+                            </div>
+                            <div class="card__main-card-desc card-desc">
+                                <div class="card-desc-title">Агент Лилик</div>
+                                <div class="card-desc-subtitle">Юрій Винничук</div>
+                                <div class="card-desc-price">14$</div>
+                                <div class="card-desc-text">В наявності</div>
+                                <a href="#" class="card__main-card-button">Видалити</a>
+                            </div>
+                            </div>
+                            <div class="card__main-counter">
+                                <button class="card__main-counter-ar">-</button>
+                                <input class="card__main-counter-in" type="text" placeholder="1">
+                                <button class="card__main-counter-ar">+</button>
+                            </div>
+                        </div>
+                        <div class="card__main-card">
+                            <div class="card__main-card-info">
+                            <div class="card__main-card-img">
+                                <img src="/img/3.jpg" alt="Фото книги">
+                            </div>
+                            <div class="card__main-card-desc card-desc">
+                                <div class="card-desc-title">Драбина</div>
+                                <div class="card-desc-subtitle">Євгенія Кузнєцова</div>
+                                <div class="card-desc-price">20$</div>
+                                <div class="card-desc-text">В наявності</div>
+                                <a href="#" class="card__main-card-button">Видалити</a>
+                            </div>
+                            </div>
+                            <div class="card__main-counter">
+                                <button class="card__main-counter-ar">-</button>
+                                <input class="card__main-counter-in" type="text" placeholder="1">
+                                <button class="card__main-counter-ar">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__order">
+                        <div class="maim__order-title">Замовлення</div>
+                        <div class="main__order-item">Кількість:</div>
+                        <div class="main__order-price">Ціна:</div>
+                        <a class="main__order-button">Придбати</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__body">
+                    <p class="footer__copy">&copy; 2024 Книжковий сайт. Усі права захищені.</p>
+                    <div class="footer__socials">
+                        <p>Ми в соціальних мережах:</p>
+                        <a href="#"><img src="/img/icon/social/instagram.png" alt="instagram"></a>
+                        <a href="#"><img src="/img/icon/social/telegram.png" alt="telegram"></a>
+                        <a href="#"><img src="/img/icon/social/whatsapp.png" alt="whatsapp"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

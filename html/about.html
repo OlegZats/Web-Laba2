@@ -3,49 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css">
     <title>Про нас</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__menu menu">
-            <nav class="menu__body">
-                <ul class="menu__list">
-                    <li class="menu__item"><a href="../index.html" class="menu__link">Головна</a></li>
-                    <li class="menu__item"><a href="catalog.html" class="menu__link">Каталог</a></li>
-                    <li class="menu__item"><a href="about.html" class="menu__link">Про нас</a></li>
-                    <li class="menu__item"><a href="faq.html" class="menu__link">FAQ</a></li>
-                    <li class="menu__item"><a href="card.html" class="menu__link">Корзина</a></li>
-                    <li class="menu__item"><a href="novelty.html" class="menu__link">Новинки</a></li>
-                    <li class="menu__item"><a href="pers_office.html" class="menu__link">Кабінет</a></li>
-                </ul>
-            </nav>
-        </div>
-        <h1>Про нас</h1>
-    </header>
-    <section>
-        <article>
-            <h2>Хто ми</h2>
-            <p>Ми команда людей, які пасіоновані книгами та читанням. Наша мета - поділитися улюбленими книгами з
-                іншими
-                людьми та сприяти культурі читання.</p>
-        </article>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__body">
+                    <a href="/index.html" class="header__logo">
+                        <img src="/logo.png" alt="">
+                    </a>
+                    <div class="header__menu menu">
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item"><a href="/index.html" class="menu__link">Головна</a></li>
+                                <li class="menu__item"><a href="/html/catalog.html" class="menu__link">Каталог</a></li>
+                                <li class="menu__item"><a href="/html/about.html" class="menu__link active">Про нас</a></li>
+                                <li class="menu__item"><a href="/html/faq.html" class="menu__link">FAQ</a></li>
+                                <li class="menu__item"><a href="/html/card.html" class="menu__link">Корзина</a></li>
+                                <li class="menu__item"><a href="/html/novelty.html" class="menu__link">Новинки</a></li>
+                                <li class="menu__item"><a href="/html/sing-in.html" class="menu__link">Вхід</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <h1 class="header__title">Про нас</h1>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="main__body-disc">
+                    <h2 class="main__title">Хто ми?</h2>
+                    <p class="main__text">
+                        Ми команда людей, які пасіоновані книгами та читанням. Наша мета - поділитися улюбленими книгами з
+                        іншими
+                        людьми та сприяти культурі читання.
+                    </p>
+                    <h2 class="main__title">Наша місія</h2>
+                    <p class="main__text">
+                        Наша місія - забезпечити доступ до різноманітних літературних творів та сприяти розвитку читацької
+                        культури.
+                        Ми віримо, що кожна книга може внести свій внесок у розуміння світу та розширити горизонти читача.
+                    </p>
+                    <h2 class="main__title">Зв'яжіться з нами</h2>
+                    <p class="main__text"> 
+                        Ми завжди відкриті до співпраці та діалогу. Зв'яжіться з нами за адресою електронної пошти:
+                        <a href="">info@knizhkovyisait.com</a>
+                    </p>
+                </div>
+                <div class="main__form">
+                    <div class="main__body-formt">
+                        Залиште відгук
+                    </div>
+                    <form class="main-form">
+                        <label for="username">Логін:</label>
+                        <input type="text" id="username" name="username" required>
 
-        <article>
-            <h2>Наша місія</h2>
-            <p>Наша місія - забезпечити доступ до різноманітних літературних творів та сприяти розвитку читацької
-                культури.
-                Ми віримо, що кожна книга може внести свій внесок у розуміння світу та розширити горизонти читача.</p>
-        </article>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" required>
 
-        <article>
-            <h2>Зв'яжіться з нами</h2>
-            <p>Ми завжди відкриті до співпраці та діалогу. Зв'яжіться з нами за адресою електронної пошти:
-                info@knizhkovyisait.com</p>
-        </article>
-    </section>
+                        <label for="response">Відгук:</label>
+                        <input type="text" id="response" name="response">
+                        
+                        <div class="main-form-agree">
+                            <input class="main-form-agreecheck" type="checkbox" name="agree" id="agree">
+                            <p>Я згоден(на) на обробку моїх персональних даних !</p>
+                        </div>
 
-    <footer>
-        <p>&copy; 2024 Книжковий сайт. Усі права захищені.</p>
-    </footer>
+                        <button class="main-form-btn">Відправити</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__body">
+                    <p class="footer__copy">&copy; 2024 Книжковий сайт. Усі права захищені.</p>
+                    <div class="footer__socials">
+                        <p>Ми в соціальних мережах:</p>
+                        <a href="#"><img src="/img/icon/social/instagram.png" alt="instagram"></a>
+                        <a href="#"><img src="/img/icon/social/telegram.png" alt="telegram"></a>
+                        <a href="#"><img src="/img/icon/social/whatsapp.png" alt="whatsapp"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
