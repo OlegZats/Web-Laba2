@@ -17,9 +17,6 @@
                     </a>
                     <div class="header__search">
                         <input class="header__search-input" type="text" placeholder="Пошук" id="search" />
-                        <a href="#">
-                            <img class="header__search-img" src="/img/icon/search.png" alt="">
-                        </a>
                     </div>
                     <div class="header__menu menu">
                         <nav class="menu__body">
@@ -28,7 +25,7 @@
                                 <li class="menu__item"><a href="./html/catalog.html" class="menu__link">Каталог</a></li>
                                 <li class="menu__item"><a href="./html/about.html" class="menu__link">Про нас</a></li>
                                 <li class="menu__item"><a href="./html/faq.html" class="menu__link">FAQ</a></li>
-                                <li class="menu__item"><a href="./html/card.html" class="menu__link">Корзина</a></li>
+                                <li class="menu__item"><a href="/html/cart.html" class="menu__link">Корзина</a><div><span id="cartItems">0</span></div></li>
                                 <li class="menu__item"><a href="./html/novelty.html" class="menu__link">Новинки</a></li>
                                 <li class="menu__item"><a href="./html/sing-in.html" class="menu__link">Вхід</a></li>
                             </ul>
@@ -42,6 +39,26 @@
         </header>
         <main class="main">
             <div class="main__container">
+                <div id="purchaseModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <form id="purchaseForm">
+                        <label for="name">Ім'я:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="address">Адреса доставки:</label>
+                        <input type="text" id="address" name="address" required><br><br>
+                        <label for="paymentMethod">Спосіб оплати:</label>
+                        <select id="paymentMethod" name="paymentMethod">
+                          <option value="creditCard">Кредитна карта</option>
+                          <option value="paypal">PayPal</option>
+                          <option value="cash">Готівка при доставці</option>
+                        </select><br><br>
+                        <input type="submit" value="Придбати">
+                      </form>
+                    </div>
+                </div>
                 <div class="main__body body__main">
                     <div class="body__main-text">
                         <div class="body__main-text-tit">Новинки</div>
@@ -50,17 +67,18 @@
                     <div class="body__main-list">
                         <div class="body__main-item main-item">
                             <a href="/html/book-page.html" class="main-item-img">
-                                <img src="./img/1.jpg" alt="Фото книги">
+                                <img src="./img/1.jpg" alt="Фото книги" class="item-img">
                             </a>
                             <div class="main-item-title">На західному фронті без змін</div>
                             <div class="main-item-subtitle">Еріх Марія Ремарк</div>
+                            <div class="main-item-availability">В наявності</div>
                             <div class="main-item-pricelike">
                                 <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
                                 <div class="main-item-price">20$</div>
                             </div>
                             <div class="main-item-buttons">
-                                <a href="#" class="main-item-button">Придбати</a>
-                                <a href="#" class="main-item-button">В корзину</a>
+                                <a class="main-item-button buy-book-know">Придбати</a>
+                                <a class="main-item-button add-to-cart">В корзину</a>
                             </div>
                         </div>
                         <div class="body__main-item main-item">
@@ -69,13 +87,14 @@
                             </a>
                             <div class="main-item-title">Молоко і мед</div>
                             <div class="main-item-subtitle">Рупі Каур</div>
+                            <div class="main-item-availability">В наявності</div>
                             <div class="main-item-pricelike">
                                 <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
                                 <div class="main-item-price">16$</div>
                             </div>
                             <div class="main-item-buttons">
-                                <a href="#" class="main-item-button">Придбати</a>
-                                <a href="#" class="main-item-button">В корзину</a>
+                                <a class="main-item-button buy-book-know">Придбати</a>
+                                <a class="main-item-button add-to-cart">В корзину</a>
                             </div>
                         </div>
                         <div class="body__main-item main-item">
@@ -84,13 +103,14 @@
                             </a>
                             <div class="main-item-title">Драбина</div>
                             <div class="main-item-subtitle">Євгенія Кузнєцова</div>
+                            <div class="main-item-availability">В наявності</div>
                             <div class="main-item-pricelike">
                                 <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
                                 <div class="main-item-price">20$</div>
                             </div>
                             <div class="main-item-buttons">
-                                <a href="#" class="main-item-button">Придбати</a>
-                                <a href="#" class="main-item-button">В корзину</a>
+                                <a class="main-item-button buy-book-know">Придбати</a>
+                                <a class="main-item-button add-to-cart">В корзину</a>
                             </div>
                         </div>
                         <div class="body__main-item main-item">
@@ -99,13 +119,14 @@
                             </a>
                             <div class="main-item-title">Білий попіл</div>
                             <div class="main-item-subtitle">Ілларіон Павлюк</div>
+                            <div class="main-item-availability">В наявності</div>
                             <div class="main-item-pricelike">
                                 <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
                                 <div class="main-item-price">18$</div>
                             </div>
                             <div class="main-item-buttons">
-                                <a href="#" class="main-item-button">Придбати</a>
-                                <a href="#" class="main-item-button">В корзину</a>
+                                <a class="main-item-button buy-book-know">Придбати</a>
+                                <a class="main-item-button add-to-cart">В корзину</a>
                             </div>
                         </div>
                         <div class="body__main-item main-item">
@@ -114,13 +135,14 @@
                             </a>
                             <div class="main-item-title">Агент Лилик</div>
                             <div class="main-item-subtitle">Юрій Винничук</div>
+                            <div class="main-item-availability">В наявності</div>
                             <div class="main-item-pricelike">
                                 <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
                                 <div class="main-item-price">14$</div>
                             </div>
                             <div class="main-item-buttons">
-                                <a href="#" class="main-item-button">Придбати</a>
-                                <a href="#" class="main-item-button">В корзину</a>
+                                <a class="main-item-button buy-book-know">Придбати</a>
+                                <a class="main-item-button add-to-cart">В корзину</a>
                             </div>
                         </div>
                         <div class="body__main-item main-item">
@@ -129,13 +151,14 @@
                             </a>
                             <div class="main-item-title">Покинь, якщо кохаєш</div>
                             <div class="main-item-subtitle">Коллін Гувер</div>
+                            <div class="main-item-availability">В наявності</div>
                             <div class="main-item-pricelike">
                                 <img class="main-item-img" src="/img/icon/heart.png" alt="Like">
                                 <div class="main-item-price">20$</div>
                             </div>
                             <div class="main-item-buttons">
-                                <a href="#" class="main-item-button">Придбати</a>
-                                <a href="#" class="main-item-button">В корзину</a>
+                                <a class="main-item-button">Придбати</a>
+                                <a class="main-item-button add-to-cart">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -156,5 +179,6 @@
             </div>
         </footer>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
